@@ -3,7 +3,7 @@
   "builders": {
     "lego": {
       "class": "./lego",
-      "schema": "./lego/schema.json",
+      "schema": "../node_modules/@angular-devkit/build-ng-packagr/src/build/schema.json",
       "description": "Build a library with ng-packagr."
     }
   }

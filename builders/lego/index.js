@@ -14,15 +14,19 @@ class LegoBuilder {
   }
 
   run(builderConfig) {
-    const basePath = path.dirname(builderConfig.options.project);
+    this.buildLegoSource(builderConfig.options.project);
+
+    return CoreBuilder.NgPackagrBuilder.prototype.run.call(this, builderConfig);
+  }
+
+  buildLegoSource(projectPath) {
+    const basePath = path.dirname(projectPath);
     const bricks = buildInfo(basePath);
     const brickTypes = Object.keys(bricks);
 
     fs.writeFileSync(path.resolve(basePath, 'src', 'bricksData.ts'), convertBricksToTs(bricks));
     fs.writeFileSync(path.resolve(basePath, 'bricks', 'bricks.module.ts'), convertBricksToImportModule(brickTypes));
     fs.writeFileSync(path.resolve(basePath, 'bricks', 'public_api.ts'), convertBricksToPublicApi(brickTypes));
-
-    return CoreBuilder.NgPackagrBuilder.prototype.run.call(this, builderConfig);
   }
 }
 
