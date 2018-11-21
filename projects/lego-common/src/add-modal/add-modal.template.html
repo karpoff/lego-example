@@ -1,0 +1,20 @@
+<div *ngIf="show" class="modal" id="exampleModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalLabel" aria-hidden="true" style="display: block;">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Добавление блока</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close" (click)="onClose()">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="list-group">
+          <a *ngFor="let type of types" href="#" class="list-group-item list-group-item-action" (click)="select(type.type)">
+            {{ type.title }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

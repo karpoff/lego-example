@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/architect/src/builders-schema.json",
+  "builders": {
+    "lego": {
+      "class": "./lego",
+      "schema": "./lego/schema.json",
+      "description": "Build a library with ng-packagr."
+    }
+  }
+}

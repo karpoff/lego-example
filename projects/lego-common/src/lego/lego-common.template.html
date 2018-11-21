@@ -1,0 +1,8 @@
+<div class="container">
+  <lego-brick-edit *ngFor="let brick of bricks; let blockIndex = index;"
+                   [brick]="brick"
+                   [position]="blockIndex"></lego-brick-edit>
+
+  <lego-add-button [position]="bricks.length"></lego-add-button>
+  <lego-add-modal></lego-add-modal>
+</div>

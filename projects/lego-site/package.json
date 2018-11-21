@@ -1,0 +1,12 @@
+{
+  "name": "lego-site",
+  "version": "0.0.1",
+  "peerDependencies": {
+    "@angular/common": "^6.0.0-rc.0 || ^6.0.0",
+    "@angular/core": "^6.0.0-rc.0 || ^6.0.0",
+    "rxjs": "^6.2.2"
+  },
+  "dependencies": {
+    "lego-common": "^0.0.1"
+  }
+}

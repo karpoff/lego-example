@@ -1,0 +1,11 @@
+<lego-add-button [position]="position"></lego-add-button>
+
+<div>
+  <ng-container #content></ng-container>
+</div>
+
+<div *ngIf="error">
+  <ul class="list-group">
+    <li class="list-group-item list-group-item-danger">{{ error }}</li>
+  </ul>
+</div>
